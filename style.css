@@ -1,0 +1,542 @@
+```css
+/* ==============================
+   RESET
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0b;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ==============================
+   CONTENEDOR
+============================== */
+
+.container {
+    width: min(1180px, 90%);
+    margin: 0 auto;
+}
+
+
+/* ==============================
+   HEADER
+============================== */
+
+.header {
+    position: relative;
+    background: #0b0b0b;
+    border-bottom: 1px solid #252525;
+}
+
+.header-content {
+    min-height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+
+/* ==============================
+   BOTONES
+============================== */
+
+.whatsapp-button,
+.hero-button,
+.buy-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.whatsapp-button {
+    border: 1px solid #444;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.whatsapp-button:hover {
+    background: #fff;
+    color: #000;
+}
+
+
+/* ==============================
+   HERO
+============================== */
+
+.hero {
+    padding: 120px 0 110px;
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            #292929 0,
+            #0b0b0b 35%
+        );
+}
+
+.eyebrow {
+    margin-bottom: 18px;
+
+    color: #999;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    max-width: 800px;
+
+    font-size: clamp(52px, 8vw, 100px);
+    line-height: 0.95;
+    letter-spacing: -4px;
+}
+
+.hero-text {
+    max-width: 580px;
+    margin: 30px 0;
+
+    color: #aaa;
+    font-size: 18px;
+}
+
+.hero-button {
+    padding: 15px 25px;
+
+    background: #fff;
+    color: #000;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
+}
+
+
+/* ==============================
+   GALERÍA
+============================== */
+
+.gallery-section {
+    padding: 100px 0;
+    background: #111;
+}
+
+.section-title {
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+
+/* ==============================
+   GRID
+============================== */
+
+.gallery {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* ==============================
+   TARJETAS
+============================== */
+
+.photo-card {
+    overflow: hidden;
+
+    background: #171717;
+
+    border: 1px solid #292929;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-6px);
+    border-color: #555;
+}
+
+
+/* ==============================
+   IMÁGENES
+============================== */
+
+.photo-container {
+    position: relative;
+    overflow: hidden;
+
+    aspect-ratio: 4 / 5;
+
+    background: #222;
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.photo-card:hover .photo-container img {
+    transform: scale(1.03);
+}
+
+
+/* ==============================
+   INFORMACIÓN FOTO
+============================== */
+
+.photo-info {
+    min-height: 100px;
+    padding: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.photo-number {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #777;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.photo-info h3 {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.buy-button {
+    flex-shrink: 0;
+
+    padding: 10px 17px;
+
+    background: #fff;
+    color: #000;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.buy-button:hover {
+    background: #ccc;
+}
+
+
+/* ==============================
+   SECCIÓN "CÓMO COMPRAR"
+============================== */
+
+.how-section {
+    padding: 110px 0;
+
+    background: #f4f4f4;
+    color: #111;
+}
+
+.how-content {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 80px;
+}
+
+.how-section .eyebrow {
+    color: #777;
+}
+
+.how-section h2 {
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1;
+    letter-spacing: -3px;
+}
+
+
+/* ==============================
+   PASOS
+============================== */
+
+.steps {
+    display: flex;
+    flex-direction: column;
+
+    border-top: 1px solid #ccc;
+}
+
+.step {
+    display: grid;
+
+    grid-template-columns: 60px 1fr;
+
+    gap: 20px;
+
+    padding: 28px 0;
+
+    border-bottom: 1px solid #ccc;
+}
+
+.step > span {
+    color: #888;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.step h3 {
+    margin-bottom: 7px;
+
+    font-size: 18px;
+}
+
+.step p {
+    color: #666;
+    font-size: 15px;
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+.footer {
+    padding: 60px 0 30px;
+
+    background: #080808;
+    color: #aaa;
+}
+
+.footer-content {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding-bottom: 45px;
+}
+
+.footer .logo {
+    color: #fff;
+}
+
+.footer-content p {
+    margin-top: 5px;
+
+    color: #666;
+    font-size: 13px;
+}
+
+.footer-content > a {
+    color: #fff;
+
+    border-bottom: 1px solid #555;
+
+    padding-bottom: 4px;
+
+    font-size: 13px;
+}
+
+.footer-content > a:hover {
+    border-color: #fff;
+}
+
+.copyright {
+    padding-top: 25px;
+
+    border-top: 1px solid #222;
+
+    color: #555;
+
+    font-size: 12px;
+}
+
+
+/* ==============================
+   TABLET
+============================== */
+
+@media (max-width: 900px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .how-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+}
+
+
+/* ==============================
+   MÓVIL
+============================== */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: min(92%, 500px);
+    }
+
+    .header-content {
+        min-height: 68px;
+    }
+
+    .logo {
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+
+    .whatsapp-button {
+        padding: 8px 13px;
+        font-size: 12px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding: 80px 0 75px;
+    }
+
+    .hero h1 {
+        font-size: clamp(48px, 15vw, 70px);
+        letter-spacing: -3px;
+    }
+
+    .hero-text {
+        margin: 25px 0;
+
+        font-size: 16px;
+    }
+
+    .hero-button {
+        width: 100%;
+    }
+
+
+    /* GALERÍA */
+
+    .gallery-section {
+        padding: 75px 0;
+    }
+
+    .section-title {
+        margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+        font-size: 40px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .photo-container {
+        aspect-ratio: 4 / 5;
+    }
+
+    .photo-info {
+        min-height: 90px;
+        padding: 18px;
+    }
+
+
+    /* CÓMO COMPRAR */
+
+    .how-section {
+        padding: 75px 0;
+    }
+
+    .how-section h2 {
+        font-size: 43px;
+    }
+
+    .step {
+        grid-template-columns: 45px 1fr;
+        gap: 12px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding-top: 45px;
+    }
+
+    .footer-content {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        padding-bottom: 35px;
+    }
+
+}
+
